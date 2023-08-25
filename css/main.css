@@ -89,57 +89,53 @@ textarea {
 /* General Styles */
  
 html {
-  font-size: 16px;
+  font-size: 1rem;
 }
  
 body {
-  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
+  font-family: 'Open Sans', sans-serif;
+  color: #e2e3ed;
   text-align: left;
-   color: #e2e3ed;
 }
  
 ul, 
 ol {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
  
 a {
 	color: #e2e3ed;
   text-decoration: none;
 }
-
-h1{
-  font-size: 2.25em;
-  line-height: 43px;
-  font-weight: 500;
-}
  
 h2 {
   font-family: 'Poppins', sans-serif;
-  font-size: 1.875em;
   font-weight: 500;
+  font-size: 1.875em;
 }
  
 h3, 
 h4 {
   font-family: 'Poppins', sans-serif;
-  margin: 20px 0;
   font-size: 1.125em;
   font-weight: 500;
+  margin: 20px 0;
 }
  
 p {
  font-size: .875em;	
- line-height: 18px;
+ line-height: 1.285;
 }
  
 img {
- 
+ width: 100%;
 }
  
 figure {
- 
+ margin: 0;
 }
  
 address {
@@ -152,39 +148,36 @@ address {
 }
 
    /*--base header/footer styles--*/
-header,
-footer{
+
+/*--header styles--*/
+
+header{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background: #202322;
-}
-/*--header styles--*/
-header{
   padding: 15px 0;
+  background: #202322;
 }
 
 header .content-wrapper{
+  margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
-  margin: 0;
+}
+
+header figure {
+  width: 60%;
 }
 
 .header-divider{
-  width: 100%;
-  height: 1px;
-  margin: 10px 0 20px 0;
   background: #3a3a3a;
+  height: 1px;
+  width: 100%;
+  margin: 10px 0 20px 0;
 }
 
 header nav{
-  display: flex;
-  justify-content: space-around;
-  align-items:center;
-  flex-flow: row wrap;
   width: 60%;
   font-size: 1.125em;
   font-weight: 700;
@@ -192,9 +185,9 @@ header nav{
 }
 
 header nav ul{
+  width: 100%;
   display: flex;
   justify-content: space-around;
-  width: 100%;
 }
 
 header nav ul li{
@@ -202,8 +195,11 @@ header nav ul li{
 }
 
 footer{
- flex-direction: column;
- text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #202322;
 }
 
 footer p{
@@ -212,7 +208,6 @@ footer p{
 
 footer .content-wrapper {
   width: 55%;
-  margin: 50px 0;
 }
 
 footer .contact{
@@ -236,16 +231,17 @@ footer .copyright{
 }
 /*--mobile-styles homepage--*/
 
-
 .hero-area{
+  background: url(../img/unplugged-retreat.jpg) center no-repeat #333;
+  background-size: cover;
+  min-height: 500px;
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
 }
 
 .hero-area h1{
   font-size: 2.25em;
-  font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.2;
 }
@@ -255,9 +251,7 @@ footer .copyright{
 aside {
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background: #527158;
+  background-color: #527158;
 }
 
 aside .form {
@@ -290,7 +284,9 @@ input[type=button] {
 .features{
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
+  background: url(../img/unplugged-retreat-features.jpg);
+  background-size: cover;
+  background-position: center;
 }
 
 .features h2{
@@ -305,7 +301,7 @@ input[type=button] {
 .features .features-items{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row wrap;
 }
 
@@ -325,8 +321,7 @@ input[type=button] {
 .reviews{
   display: flex;
   justify-content: center;
-  flex-flow: row wrap;
-  background: #2a423a;
+  background-color: #2a423a;
 }
 
 .reviews h2{
@@ -345,38 +340,49 @@ input[type=button] {
 .mission{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background: #527158;
+  background-color: #527158;
 }
 
 .contact-section{
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
-  background: #2a423a;
+  background-color: #2a423a;
 }
 
 .contact-content p{
   margin: 0;
 }
+
+.map figure{
+  width: 100%;
+  height: 0;
+  position: relative;
+  padding-bottom: 125%;
+  overflow: hidden;
+}
+
+.map iframe{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
 /*--FAQ page--*/
 
 .faq{
   background-color: #527158;
   display: flex;
   justify-content: center;
-  align-items: center;
-  flex-flow: row wrap;
 }
 
 .faq .content-wrapper{
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-flow: row wrap;
-  margin: 50 0 0 0;
+  margin: 50px 0 0 0;
 }
 
 .faq h2{
@@ -500,7 +506,6 @@ h3 {
 /* Header */
 
 header{
-  justify-content: space-around;
   padding: 33px 0;
 }
 
@@ -526,8 +531,8 @@ header nav ul{
 }
 
 /* Hero Area */
-.hero-image{
-  width: 100%;
+.hero-area{
+  min-height: 600px;
 }
 
 .hero-area h1{
@@ -541,7 +546,7 @@ aside .content-wrapper {
   margin: 50px 0;
   display: flex;
   justify-content: space-between;
-  flex-flow: row wrap;
+  align-content: flex-start;
 }
 
 aside .content-wrapper .form-description,
@@ -558,7 +563,6 @@ aside .content-wrapper .form {
 
 .features article {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-flow: column wrap;
   flex-basis: 50%;
@@ -578,6 +582,7 @@ aside .content-wrapper .form {
   width: 85%;
 }
 
+.reviews article figure, 
 .reviews article div {
   width: 49%;    
 }
@@ -590,10 +595,9 @@ aside .content-wrapper .form {
 /* Footer */
 footer .content-wrapper {
   width: 65%;
-  margin: 100px 0;
 }
 
-.footer-content {
+footer .footer-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -626,8 +630,8 @@ footer .copyright {
    .mission-content {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding-top: 20px
+    align-items: flex-start;
+    padding-top: 20px;
   }
 
   .mission-content p {
@@ -665,6 +669,7 @@ footer .copyright {
       font-size: .875em;
       line-height: 1.125;
   }
+}
 
 /*=========================================================================
 Desktop Styles.*/
@@ -672,12 +677,12 @@ Desktop Styles.*/
 
 @media only screen and (min-width: 1200px) {
 
-  header {
-    padding: 15px 0;
-  }
-
   .content-wrapper{
     max-width: 960px;
+  }
+
+  header {
+    padding: 15px 0;
   }
 
   h2 {
@@ -695,14 +700,10 @@ Desktop Styles.*/
   }
   
   /* Hero Area */
-  
-  .hero-image{
-    width: 100%;
-  }
 
   .hero-area h1{
-    width: 60%;
     font-size: 3.75em;
+    width: 80%;
   }
 
   /* Aside */
